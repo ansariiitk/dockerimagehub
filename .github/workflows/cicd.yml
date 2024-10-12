@@ -50,6 +50,6 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{__secrets.DOCKER_USERNAME__}} /flasktest-app: latest
+        tags: ${{__secrets.DOCKER_USERNAME__}}/flasktest-app:latest
     - name: Image digest
       run: echo ${{__steps.build-and-publish.outputs.digest__}}
